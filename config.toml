@@ -18,7 +18,7 @@ description   = "3D Print Tile — specialist coverage of ceramic tile design an
 keywords      = "ceramic tile 3D printing, parametric tile design, custom floor tile, acoustic ceramic tile, facade cladding 3D print, architectural ceramics, custom relief tile"
 logoEmoji     = "🟫"
 contactEmail  = "maxdavisgroup@gmail.com"
-ogImage       = "images/15_facade_modular.png"
+ogImage       = "/images/03_textured_collection.png"
 footerServicesLabel = "Services"
 
 colorPrimary      = "#c2714f"
