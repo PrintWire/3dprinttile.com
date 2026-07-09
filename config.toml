@@ -1,10 +1,18 @@
 baseURL = "https://3dprinttile.com/"
 languageCode = "en-us"
 title = "3D Print Tile"
-theme = "printwire"
+[outputs]
+  home = ["HTML", "JSON"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 # All single-value params MUST come before [[params.*]] array tables
 [params]
+siteName      = "3D Print Tile"
+logoHtml      = '3D&nbsp;PRINT&nbsp;<span class="ed-logo-accent">TILE</span>'
 tagline       = "The specialist resource for ceramic tile design and additive manufacturing."
 description   = "3D Print Tile — specialist coverage of ceramic tile design and additive manufacturing for parametric interiors, acoustic walls, and custom facade cladding."
 keywords      = "ceramic tile 3D printing, parametric tile design, custom floor tile, acoustic ceramic tile, facade cladding 3D print, architectural ceramics, custom relief tile"
