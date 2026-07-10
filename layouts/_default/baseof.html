@@ -10,23 +10,27 @@
   <title>{{ .Title }} | {{ .Site.Title }}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/editorial.css">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
   <style>
-  .article-content h2 { font-family: var(--font-display); margin: 2.5rem 0 1rem; color: var(--accent); font-size: 1.5rem; }
-  .article-content h3 { font-family: var(--font-display); margin: 2rem 0 0.75rem; font-size: 1.25rem; color: var(--heading); }
-  .article-content p { margin-bottom: 1.5rem; color: var(--text-dim); line-height: 1.8; }
-  .article-content ul, .article-content ol { margin-bottom: 1.5rem; padding-left: 1.5rem; color: var(--text-dim); }
-  .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
-  .article-content a { color: var(--accent); text-decoration: underline; }
-  .article-content a:hover { color: var(--heading); }
-  .article-content blockquote { border-left: 3px solid var(--accent); padding-left: 1.5rem; margin: 1.5rem 0; color: var(--text-dim); font-style: italic; }
-  .article-content strong { color: var(--heading); }
-  .article-content hr { border: none; border-top: 1px solid var(--border); margin: 2.5rem 0; }
-  .article-content table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
-  .article-content th, .article-content td { padding: 0.75rem 1rem; border: 1px solid var(--border); color: var(--text-dim); text-align: left; }
-  .article-content th { background: var(--accent-dim); color: var(--heading); font-family: var(--font-display); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
-  .article-content img { max-width: 100%; border-radius: var(--radius); margin: 1.5rem 0; }
+  :root{--primary:#c2714f;--primary-dark:#a85e3e;--primary-light:#d4896b;--bg-dark:#0d0b09;--bg-section:#111009;--bg-card:#1a1510;--bg-card-hover:#231d15;--border:rgba(194,113,79,0.18);--border-light:rgba(194,113,79,0.08)}
+  .breadcrumbs{max-width:var(--max-width-wide);margin:0 auto;padding:1rem 1.5rem;color:var(--text-muted);font-size:.8rem;}
+  .breadcrumbs a{color:var(--text-secondary);text-decoration:none;}
+  .breadcrumbs a:hover{color:var(--primary-light);}
+  .article-content h2{font-family:'Josefin Sans',sans-serif;margin:2.5rem 0 1rem;color:var(--primary-light);font-size:1.5rem;}
+  .article-content h3{font-family:'Josefin Sans',sans-serif;margin:2rem 0 .75rem;font-size:1.25rem;color:var(--text-primary);}
+  .article-content p{margin-bottom:1.5rem;color:var(--text-secondary);line-height:1.8;}
+  .article-content ul,.article-content ol{margin-bottom:1.5rem;padding-left:1.5rem;color:var(--text-secondary);}
+  .article-content li{margin-bottom:.5rem;line-height:1.7;}
+  .article-content a{color:var(--primary-light);text-decoration:underline;}
+  .article-content a:hover{color:var(--white);}
+  .article-content blockquote{border-left:3px solid var(--primary);padding-left:1.5rem;margin:1.5rem 0;color:var(--text-secondary);font-style:italic;}
+  .article-content strong{color:var(--text-primary);}
+  .article-content hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
+  .article-content table{width:100%;border-collapse:collapse;margin-bottom:1.5rem;}
+  .article-content th,.article-content td{padding:.75rem 1rem;border:1px solid var(--border);color:var(--text-secondary);text-align:left;}
+  .article-content th{background:var(--bg-card);color:var(--text-primary);font-family:'Josefin Sans',sans-serif;font-size:.85rem;text-transform:uppercase;letter-spacing:.05em;}
+  .article-content img{max-width:100%;border-radius:var(--radius);margin:1.5rem 0;}
   </style>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   {{ $og := ((.Params.image | default .Site.Params.ogImage) | absURL) }}
@@ -35,94 +39,36 @@
   <meta name="twitter:image" content="{{ $og }}">
 </head>
 <body>
+<header class="site-header"><nav class="navbar"><div class="nav-container">
+  <a href="/" class="nav-logo"><span class="logo-emoji">&#128993;</span> <span class="logo-text">{{ .Site.Title }}</span></a>
+  <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span class="hamburger"></span><span class="hamburger"></span><span class="hamburger"></span></button>
+  <ul class="nav-menu">
+    <li><a href="/" class="nav-link">Home</a></li>
+    <li><a href="/about.html" class="nav-link">About</a></li>
+    <li><a href="/articles/" class="nav-link active">Articles</a></li>
+    <li><a href="/advertise.html" class="nav-link">Advertise</a></li>
+    <li><a href="/contact.html" class="nav-link">Contact</a></li>
+  </ul>
+</div></nav></header>
 
-<header class="ed-header">
-  <div class="ed-header-inner">
-    <a href="/" class="ed-logo">
-      {{ .Site.Params.logoHtml | default .Site.Params.siteName | safeHTML }}
-    </a>
-    <button class="ed-nav-toggle" aria-label="Menu" onclick="document.querySelector('.ed-nav').classList.toggle('open')">&#9776;</button>
-    <nav class="ed-nav">
-      <a href="/">News</a>
-      <a href="/articles/" class="active">Research</a>
-      <a href="/#suppliers">Suppliers</a>
-      <a href="/#suppliers">Materials</a>
-      <a href="/about.html">About</a>
-      <a href="/contact.html">Contact</a>
-    </nav>
-    <button class="ed-theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle light/dark mode">&#9790;</button>
-  </div>
-</header>
+<div class="breadcrumbs"><a href="/">Home</a> <span>/</span> {{ block "breadcrumb" . }}Articles{{ end }}</div>
 
-<div class="ed-breadcrumbs">
-  <a href="/">Home</a> <span>/</span> {{ block "breadcrumb" . }}Articles{{ end }}
-</div>
-
-<main>
+<main id="main-content">
   {{ block "main" . }}{{ end }}
 </main>
 
-<footer class="ed-footer">
-  <div class="ed-footer-inner">
-    <div class="ed-footer-brand">
-      <div class="ed-logo">{{ .Site.Params.logoHtml | default .Site.Params.siteName | safeHTML }}</div>
-      <p>{{ .Site.Params.description }} Part of the PrintWire network.</p>
-    </div>
-    <div>
-      <h4>Navigation</h4>
-      <ul>
-        <li><a href="/">News</a></li>
-        <li><a href="/articles/">Research</a></li>
-        <li><a href="/about.html">About</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Coverage</h4>
-      <ul>
-        <li><a href="#">Technical Ceramics</a></li>
-        <li><a href="#">Porcelain</a></li>
-        <li><a href="#">Tile & Facades</a></li>
-        <li><a href="/advertise.html">Advertise With Us</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Applications</h4>
-      <ul>
-        <li><a href="#">Decor & Vases</a></li>
-        <li><a href="#">Tableware</a></li>
-        <li><a href="#">Architecture</a></li>
-        <li><a href="#">Dental</a></li>
-      </ul>
+<footer class="site-footer"><div class="footer-container">
+  <div class="footer-main">
+    <div class="footer-brand"><div class="footer-logo">&#128993; {{ .Site.Title }}</div><p>The specialist resource for ceramic tile design and additive manufacturing.</p></div>
+    <div class="footer-links">
+      <div class="footer-column"><h4>Company</h4><ul><li><a href="/about.html">About Us</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/advertise.html">Advertise</a></li></ul></div>
+      <div class="footer-column"><h4>Coverage</h4><ul><li><a href="/articles/">All Articles</a></li><li><a href="/">Applications</a></li></ul></div>
+      <div class="footer-column"><h4>Network</h4><ul><li><a href="https://3dprintceramic.com" target="_blank" rel="noopener">Ceramic Printing</a></li><li><a href="https://3dprintstone.com" target="_blank" rel="noopener">Stone AM</a></li><li><a href="https://3dprintporcelain.com" target="_blank" rel="noopener">Porcelain</a></li></ul></div>
     </div>
   </div>
-  <div class="ed-footer-bottom">
-    <div>&copy; 2026 {{ .Site.Params.siteName }}. Part of the <a href="https://3dprint.space">PrintWire</a> network.</div>
-    <div>
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
-    </div>
-  </div>
-</footer>
+  <div class="footer-bottom"><p>&copy; 2026 {{ .Site.Title }}. All rights reserved. Part of the PrintWire network.</p></div>
+</div></footer>
 
-<script>
-// Theme toggle
-(function() {
-  var btn = document.getElementById('themeToggle');
-  var root = document.documentElement;
-  function setTheme(theme) {
-    root.setAttribute('data-theme', theme);
-    localStorage.setItem('ed-theme', theme);
-    btn.innerHTML = theme === 'dark' ? '☾' : '☀';
-    btn.title = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
-  }
-  var saved = localStorage.getItem('ed-theme');
-  setTheme(saved || 'light');
-  btn.addEventListener('click', function() {
-    var current = root.getAttribute('data-theme') || 'light';
-    setTheme(current === 'dark' ? 'light' : 'dark');
-  });
-})();
-</script>
+<script src="/js/main.js"></script>
 </body>
 </html>
