@@ -1,192 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact 3D Print Tile — project quotes for scale models, concrete printing, and facade panels, plus editorial and research inquiries.">
-    <meta name="keywords" content="architectural 3D printing quote, concrete printing project, facade panel manufacturing, parametric design consultation">
-    <meta property="og:title" content="Contact — 3D Print Tile">
-    <meta property="og:description" content="Get in touch about scale models, concrete 3D printing projects, facade panels, and media partnerships.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="/images/04_extrusion_closeup.png">
-    <title>Contact — 3D Print Tile</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/editorial.css">
-    <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org",
-        "@type": "ContactPage",
-        "name": "Contact 3D Print Tile",
-        "url": "https://3dprintceramics.com/contact.html",
-        "description": "Request a quote or get in touch about architectural additive manufacturing."
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "3D Print Tile",
-        "url": "https://3dprintceramics.com"
-      }
-    ]
-    </script>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-</head>
-<body>
-
-<header class="ed-header">
-  <div class="ed-header-inner">
-    <a href="/" class="ed-logo">3D PRINT <span class="ed-logo-accent">TILE</span></a>
-    <button class="ed-nav-toggle" aria-label="Menu" onclick="document.querySelector('.ed-nav').classList.toggle('open')">&#9776;</button>
-    <nav class="ed-nav">
-      <a href="/">News</a>
-      <a href="/articles/">Research</a>
-      <a href="/#suppliers">Suppliers</a>
-      <a href="/#suppliers">Materials</a>
-      <a href="/about.html">About</a>
-      <a href="/contact.html" class="active">Contact</a>
-    </nav>
-    <button class="ed-theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">&#9790;</button>
-  </div>
-</header>
-
-<main>
-
-  <!-- Breadcrumbs -->
-  <nav class="ed-breadcrumbs">
-    <a href="/">Home</a> / <span>Contact</span>
-  </nav>
-
-  <!-- Page Hero -->
-  <section class="ed-page-hero">
-    <img src="/images/04_extrusion_closeup.png" alt="Parametric architectural structure" loading="lazy">
-    <div class="ed-page-hero-overlay"></div>
-    <div class="ed-page-hero-content">
-      <h1>Contact Us</h1>
-      <p>Project quotes, research inquiries, and editorial contact for architectural additive manufacturing.</p>
-    </div>
-  </section>
-
-  <!-- Content -->
-  <div class="ed-content">
-
-    <section class="ed-section">
-      <div class="ed-two-col">
-
-        <!-- LEFT COLUMN -->
-        <div>
-          <h2>Let&rsquo;s Start a Conversation</h2>
-          <p>Whether you need a presentation-grade scale model, a robotic concrete printing project, or a facade panel system, our team is ready to help you navigate materials selection, design optimization, and fabrication strategy. Tell us about your project and we&rsquo;ll respond promptly.</p>
-
-          <div class="ed-info-card">
-            <span style="font-size:1.8rem;">&#127959;</span>
-            <div>
-              <h4>What We Cover</h4>
-              <p>Scale models, concrete 3D printing, facade panels, and parametric design-to-fabrication.</p>
-            </div>
-          </div>
-
-          <div class="ed-info-card">
-            <span style="font-size:1.8rem;">&#128196;</span>
-            <div>
-              <h4>File Formats</h4>
-              <p>We accept STL, STEP, IGES, Rhino (3DM), and IFC/BIM exports for model and structural work.</p>
-            </div>
-          </div>
-
-          <div class="ed-info-card">
-            <span style="font-size:1.8rem;">&#9993;</span>
-            <div>
-              <h4>Direct Contact</h4>
-              <p>maxdavisgroup@gmail.com</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- RIGHT COLUMN -->
-        <div>
-          <h2>Request a Quote</h2>
-          <form class="ed-form" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
-            <input type="hidden" name="access_key" value="6f33053b-6d08-414b-9615-665f88c98da8">
-            <input type="hidden" name="subject" value="New inquiry from 3dprintceramics.com">
-            <input type="hidden" name="ccs" value="printwire@gmail.com">
-
-            <div class="ed-form-group">
-              <label for="name">Full Name <span class="required">*</span></label>
-              <input type="text" id="name" name="name" required placeholder="Your full name">
-            </div>
-
-            <div class="ed-form-group">
-              <label for="email">Email <span class="required">*</span></label>
-              <input type="email" id="email" name="email" required placeholder="you@company.com">
-            </div>
-
-            <div class="ed-form-group">
-              <label for="company">Company / Studio</label>
-              <input type="text" id="company" name="company" placeholder="Practice or company name">
-            </div>
-
-            <div class="ed-form-group">
-              <label for="topic">Topic</label>
-              <select id="topic" name="topic">
-                <option value="">Select a topic</option>
-                <option value="scale-model">Scale model quotation</option>
-                <option value="concrete">Concrete 3D printing project</option>
-                <option value="facade">Facade panel manufacturing</option>
-                <option value="parametric">Parametric design consultation</option>
-                <option value="advertising">Advertising &amp; media partnerships</option>
-                <option value="editorial">Editorial or research inquiry</option>
-              </select>
-            </div>
-
-            <div class="ed-form-group">
-              <label for="details">Project Details <span class="required">*</span></label>
-              <textarea id="details" name="details" rows="5" required placeholder="Describe your project: scale, material, quantity, timeline..."></textarea>
-            </div>
-
-            <div class="ed-form-group">
-              <label for="file">Upload File (STL, STEP, IGES, 3DM)</label>
-              <input type="file" id="file" name="file" accept=".stl,.step,.stp,.iges,.igs,.3dm,.ifc">
-            </div>
-
-            <button type="submit" class="ed-form-submit">Submit Inquiry</button>
-          </form>
-        </div>
-
-      </div>
-    </section>
-
-  </div><!-- /.ed-content -->
-
-</main>
-
-<footer class="ed-footer">
-  <div class="ed-footer-inner">
-    <div class="ed-footer-brand">
-      <div class="ed-logo" style="font-size:1.3rem;margin-bottom:0.5rem;">3D PRINT <span class="ed-logo-accent">TILE</span></div>
-      <p>Construction &amp; architectural additive manufacturing news, projects, materials, and a directory connecting builders to suppliers. Part of the PrintWire network.</p>
-    </div>
-    <div><h4>Sections</h4><ul><li><a href="/">News</a></li><li><a href="/articles/">Research</a></li><li><a href="/#suppliers">Suppliers</a></li><li><a href="/about.html">About</a></li></ul></div>
-    <div><h4>Company</h4><ul><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/advertise.html">Advertise</a></li></ul></div>
-    <div><h4>Coverage</h4><ul><li><a href="#">Concrete Printing</a></li><li><a href="#">Facade Panels</a></li><li><a href="#">Scale Models</a></li><li><a href="#">Robotic Construction</a></li><li><a href="#">Materials</a></li></ul></div>
-  </div>
-  <div class="ed-footer-bottom">
-    <span>&copy; 2026 3D Print Tile. Part of the <a href="https://3dprint.space" style="color:var(--accent);">PrintWire</a> network.</span>
-    <span><a href="#">Privacy</a><a href="#">Terms</a></span>
-  </div>
-</footer>
-
-<script>
-(function() {
-  var btn = document.getElementById('themeToggle');
-  var root = document.documentElement;
-  function setTheme(t) { root.setAttribute('data-theme', t); localStorage.setItem('ed-theme', t); btn.innerHTML = t === 'dark' ? '&#9790;' : '&#9728;'; }
-  var s = localStorage.getItem('ed-theme');
-  setTheme(s || 'dark');
-  btn.addEventListener('click', function() { setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'); });
-})();
-</script>
-
-</body>
-</html>
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="The specialist resource for ceramic tile design and additive manufacturing."><meta name=keywords content="ceramic tile 3D printing,parametric tile design,custom floor tile,acoustic ceramic tile,facade cladding 3D print,architectural ceramics,custom relief tile"><meta property="og:title" content="Contact 3D Print Tile | 3D Print Tile"><meta property="og:description" content="The specialist resource for ceramic tile design and additive manufacturing."><meta property="og:type" content="website"><meta property="og:image" content="images/15_facade_modular.png"><meta name=author content="Max Davis, Ben Stagl, Ally Reza - ChiLab Studio"><title>Contact 3D Print Tile — 3D Print Tile</title>
+<link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Josefin%2bSans:wght@300;400;600;700&family=Lato:wght@300;400;700&display=swap" rel=stylesheet><link rel=stylesheet href=css/style.css><link rel=icon href=favicon.svg type=image/svg+xml><style>:root{--primary:#c2714f;--primary-dark:#a85e3e;--primary-light:#d4896b;--bg-dark:#0d0b09;--bg-section:#111009;--bg-card:#1a1510;--bg-card-hover:#231d15;--border:rgba(194,113,79,0.18);--border-light:rgba(194,113,79,0.08)}</style><script type=application/ld+json>[{"@context":"https://schema.org","@type":"Organization","name":"3D Print Tile","url":"https:\/\/3dprinttile.com\/","description":"The specialist resource for ceramic tile design and additive manufacturing.","contactPoint":{"@type":"ContactPoint","contactType":"customer service","url":"https:\/\/3dprinttile.com\/contact/"}},{"@context":"https://schema.org","@type":"WebSite","name":"3D Print Tile","url":"https:\/\/3dprinttile.com\/"},{"@context":"https://schema.org","@type":"Service","name":"Custom Relief Tile","provider":{"@type":"Organization","name":"3D Print Tile","url":"https:\/\/3dprinttile.com\/"},"url":"https:\/\/3dprinttile.com\/services/"},{"@context":"https://schema.org","@type":"Service","name":"Glaze Development","provider":{"@type":"Organization","name":"3D Print Tile","url":"https:\/\/3dprinttile.com\/"},"url":"https:\/\/3dprinttile.com\/services/"},{"@context":"https://schema.org","@type":"Service","name":"Parametric Design","provider":{"@type":"Organization","name":"3D Print Tile","url":"https:\/\/3dprinttile.com\/"},"url":"https:\/\/3dprinttile.com\/services/"},{"@context":"https://schema.org","@type":"Service","name":"Facade Engineering","provider":{"@type":"Organization","name":"3D Print Tile","url":"https:\/\/3dprinttile.com\/"},"url":"https:\/\/3dprinttile.com\/services/"}]</script><script>window.SITE_CONFIG={newsFallbackImages:["images/02_printer_active.png","images/06_pattern_collection.png","images/14_param_gradient.png"],pubmedFallback:"ceramic+tile+3D+printing",pubmedQuery:"ceramic+tile+additive+manufacturing+parametric+design"}</script></head><body><header class=site-header><nav class=navbar><div class=nav-container><a href=index.html class=nav-logo><span class=logo-emoji>🟫</span>
+<span class=logo-text>3D Print Tile</span>
+</a><button class=nav-toggle aria-label="Toggle navigation" aria-expanded=false>
+<span class=hamburger></span>
+<span class=hamburger></span>
+<span class=hamburger></span></button><ul class=nav-menu><li><a href=index.html class=nav-link>Home</a></li><li><a href=about.html class=nav-link>About</a></li><li><a href=/articles/ class=nav-link>Articles</a></li><li><a href=contact.html class="nav-link active">Contact</a></li><li><a href=advertise.html class=nav-link>Advertise</a></li></ul></div></nav></header><main id=main-content><section class=page-hero><div class=page-hero-bg><img src=images/11_public_art.png alt="Contact 3D Print Tile" loading=eager></div><div class=page-hero-overlay></div><div class=page-hero-content><h1>Contact 3D Print Tile</h1><p class=page-hero-subtitle>Get in touch with our editorial and fabrication team.</p></div></section><section class=contact-section><div class=container-wide><div class=contact-grid><div class="contact-info animate-in"><h2>Get in Touch</h2><p>Have a question, story tip, or fabrication inquiry? We'd love to hear from you.</p><div class=contact-detail><span class=contact-detail-icon>✉</span>
+<span class=contact-detail-text>maxdavisgroup@gmail.com</span></div><div style=margin-top:2rem><h4 style=margin-bottom:1rem;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text-muted)>We Can Help With</h4><ul style=list-style:none;padding:0><li style="padding:.4rem 0;color:var(--text-secondary);font-size:.93rem;border-bottom:1px solid var(--border-light);display:flex;gap:.5rem"><span style=color:var(--primary-light)>→</span> Custom ceramic fabrication quotes</li><li style="padding:.4rem 0;color:var(--text-secondary);font-size:.93rem;border-bottom:1px solid var(--border-light);display:flex;gap:.5rem"><span style=color:var(--primary-light)>→</span> Research & editorial inquiries</li><li style="padding:.4rem 0;color:var(--text-secondary);font-size:.93rem;border-bottom:1px solid var(--border-light);display:flex;gap:.5rem"><span style=color:var(--primary-light)>→</span> Advertising & sponsorship</li><li style="padding:.4rem 0;color:var(--text-secondary);font-size:.93rem;border-bottom:1px solid var(--border-light);display:flex;gap:.5rem"><span style=color:var(--primary-light)>→</span> Partnership & collaboration</li><li style="padding:.4rem 0;color:var(--text-secondary);font-size:.93rem;border-bottom:1px solid var(--border-light);display:flex;gap:.5rem"><span style=color:var(--primary-light)>→</span> Press & media requests</li></ul></div></div><div class=animate-in><div class=contact-form-wrap><h3 style=margin-bottom:1.5rem>Send a Message</h3><div class=form-message></div><form id=contact-form><input type=hidden name=access_key value=6f33053b-6d08-414b-9615-665f88c98da8>
+<input type=hidden name=cc value=printwire@gmail.com>
+<input type=hidden name=subject value="Contact — 3D Print Tile"><div class=form-group><label class=form-label for=name>Name</label>
+<input class=form-input type=text id=name name=name placeholder="Your full name" required></div><div class=form-group><label class=form-label for=email>Email</label>
+<input class=form-input type=email id=email name=email placeholder=you@example.com required></div><div class=form-group><label class=form-label for=subject-field>Subject</label>
+<input class=form-input type=text id=subject-field name=subject_detail placeholder="How can we help?"></div><div class=form-group><label class=form-label for=message>Message</label>
+<textarea class=form-textarea id=message name=message placeholder="Tell us more..." required></textarea></div><button type=submit class=btn style=width:100%>Send Message</button></form></div></div></div></div></section></main><footer class=site-footer><div class=footer-container><div class=footer-main><div class=footer-brand><div class=footer-logo>🟫 3D Print Tile</div><p>The specialist resource for ceramic tile design and additive manufacturing.</p></div><div class=footer-links><div class=footer-column><h4>Company</h4><ul><li><a href=about.html>About Us</a></li><li><a href=/articles/>Services</a></li><li><a href=contact.html>Contact</a></li><li><a href=advertise.html>Advertise</a></li></ul></div><div class=footer-column><h4>Services</h4><ul></ul></div><div class=footer-column><h4>Articles</h4><ul><li><a href=/articles/>All Articles</a></li><li><a href=contact.html>Contact Us</a></li><li><a href=advertise.html>Advertising</a></li></ul></div></div></div><div class=footer-bottom><p>&copy; 2026 3D Print Tile. All rights reserved.</p></div></div></footer><script src=js/main.js></script><div style="background:#080705;border-top:1px solid var(--border-light);padding:.75rem 1rem;text-align:center;overflow-x:auto;white-space:nowrap"><span style=color:var(--text-muted);font-size:.75rem;margin-right:.5rem>NETWORK:</span>
+<a href=https://dmls3d.com style="color:var(--text-secondary);text-decoration:none;margin:0 .5rem;font-size:.8rem">Metal 3D Printing</a>
+<a href=https://metalpowder.co style="color:var(--text-secondary);text-decoration:none;margin:0 .5rem;font-size:.8rem">Metal Powder</a>
+<a href=https://3dprintfood.com style="color:var(--text-secondary);text-decoration:none;margin:0 .5rem;font-size:.8rem">Food Printing</a>
+<a href=https://3dprintceramic.com style="color:var(--text-secondary);text-decoration:none;margin:0 .5rem;font-size:.8rem">Ceramic Printing</a>
+<a href=https://3dprintcircuitry.com style="color:var(--text-secondary);text-decoration:none;margin:0 .5rem;font-size:.8rem">Electronics Printing</a>
+<a href=https://3dprintjewelry.com style="color:var(--text-secondary);text-decoration:none;margin:0 .5rem;font-size:.8rem">Jewelry Printing</a>
+<a href=https://3dprintarchitecture.com style="color:var(--text-secondary);text-decoration:none;margin:0 .5rem;font-size:.8rem">Architecture Printing</a>
+<a href=https://3dprintpipes.com style="color:var(--text-secondary);text-decoration:none;margin:0 .5rem;font-size:.8rem">Industrial Printing</a>
+<a href=https://sendcutship.com style="color:var(--text-secondary);text-decoration:none;margin:0 .5rem;font-size:.8rem">Manufacturing</a>
+<a href=https://3dprintskincare.com style="color:var(--text-secondary);text-decoration:none;margin:0 .5rem;font-size:.8rem">Beauty & Cosmetics</a>
+<a href=https://3dprintsolar.com style="color:var(--text-secondary);text-decoration:none;margin:0 .5rem;font-size:.8rem">Clean Energy</a>
+<a href=https://3dprinttitanium.com style="color:var(--text-secondary);text-decoration:none;margin:0 .5rem;font-size:.8rem">Titanium Printing</a>
+<a href=https://3dprinttissue.com style="color:var(--text-secondary);text-decoration:none;margin:0 .5rem;font-size:.8rem">Bioprinting</a></div></body></html>
